@@ -31,17 +31,17 @@
     <div class="sub-container">
     <div class="left-main">
   <h1>Invoices</h1>
-  <p>There are <!-- Add number here --> total invoices</p>
+  <p>No invoices</p>
     </div>
     <div class="right-main">
-  <p>Filter by status</p>
+  <p class="hide-filter">Filter <span>by status</span></p>
 <select name="status" id="status">
-<option></option>
+  <option value="" selected disabled hidden>Filter</option>
 <option value="draft">Draft</option>
 <option value="pending">Pending</option>
 <option value="paid">Paid</option>
 </select>
-<button><span><img src="./assets/icon-plus.svg" alt="plus symbol"></span>New Invoice</button>
+<button><span class="plus"><img src="./assets/icon-plus.svg" alt="plus symbol"></span>New <span class="inner-invoice">Invoice</span></button>
 </div>
 </div>
 
