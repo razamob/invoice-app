@@ -1,61 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Invoice app</title>
 </head>
 
 <body>
-  Go back
+  <div class="sidebar">
+    <div class="icon-container">
+      <div class="top-icon"></div>
+      <img src="./assets/logo.svg" alt="logo">
+      <div class="bottom-icon"></div>
+    </div>
+    <div class="moon-container">
+      <img class="moon-img" src="./assets/icon-moon.svg" alt="moon">
+      <div class="avatar-container">
+      <img class="avatar" src="./assets/image-avatar.jpg" alt="image of person with hat">
+    </div>
+    </div>
+  </div>
+  <div class="container-invoice">
+  <a class="back" href="javascript:history.back()"><img src="./assets/icon-arrow-left.svg" alt="Left Arrow"> Go back</a> 
 
-  Status <!-- Add status -->
-
-  Edit
-  Delete
-  Mark as Paid
-
-  #<!-- Add id -->
+  <div class="top-bar">
+    <div class="inner-top-container">
+  <div class="left-top-bar">
+    <div class="status">Status</div><div class="item-invoice payment"><span></span> Pending</div> <!-- Add status -->
+  </div>
+  <div class="right-top-bar">
+  <a class="edit" href="#">Edit</a>  
+  <a class="delete" href="#">Delete</a>
+  <a class="mark-paid" href="#">Mark as Paid</a>
+</div>
+</div>
+</div>
+<div class="bottom-bar">
+  <div class="top-section">
+    <div class="left-side">
+  <h2>#XM9141</h2><!-- Add id -->
   <!-- Add description -->
-
-  <!-- Add senderAdress -->
-
-  Invoice Date
+  <p class="title">Graphic Design</p>
+</div>
+<div class="right-side">
+<p>19 Union Terrace</p>
+<p>London</p>
+<p>E1 3EZ</p>
+<p>United Kingdom</p>
+</div>
+</div>
+<div class="mid-section">
+  <div class="left-mid">
+    <div class="date-inv">
+  <p>Invoice Date</p>
   <!-- Add createdAt -->
-
-  Payment Due
+  <h3>21 Aug 2021</h3>
+    </div>
+    <div class="payment-due">
+  <p>Payment Due</p>
   <!-- Add paymentDue -->
+      <h3>20 Sep 2021</h3>
+  </div>
+  </div>
 
-  Bill To
+  <div class="center-mid">
+  <p>Bill To</p>
   <!-- Add clientName -->
+  <h3>Alex Grim</h3>
   <!-- Add clientAdress -->
+  <p>84 Church Way</p>
+  <p>Bradford</p>
+  <p>BD1 9PB</p>
+  <p>United Kingdom</p>
+  </div>
 
-  Sent To
+  <div class="end-mid">
+  <p>Sent To</p>
+  <h3>alexgrim@gmail.com</h3>
   <!-- Add clientEmail -->
+</div>
+</div>
 
-  Item Name
-  QTY.
-  Price
-  Total
+<div class="bottom-section">
+  <div class="first-bottom-section">
+  <div class="name">
+    <p class="colored">Item Name</p>
+    <p>Banner Design</p>
+    <p>Email Design</p>
+  </div>
+  <div class="info">
+    <div class="left-info">
+      <p class="colored">QTY.</p>
+      <p class="colored">1</p>
+      <p class="colored">2</p>
+    </div>
 
+    <div class="mid-info">
+      <p class="colored">Price</p>
+      <p class="colored">£ 156.00</p>
+      <p>£ 200.00</p>
+    </div>
+
+    <div class="end-info">
+      <p class="colored">Total</p>
+      <p class="colored">£ 156.00</p>
+      <p>£ 400.00</p>
+    </div>
+  </div>
+</div>
   <!-- Add item.name -->
   <!-- Add item.quanity -->
   <!-- Add item.price -->
   <!-- Add item.total -->
-
-  Amount Due
-  £ <!-- Add total -->
-
+<div class="second-bottom-section">
+  <p>Amount Due</p>
+  <h2>£ 556.00</h2> <!-- Add total -->
+</div>
+</div>
+</div>
   <!-- Edit invoice form -->
-  Go back
+  <!-- Go back
 
-  Edit #<!-- Add id -->
+  Edit #Add id -->
 
-  Bill From
+  <!-- Bill From
   
   Street Address
   City
@@ -91,17 +164,19 @@
   Add New Item
 
   Cancel
-  Save Changes
+  Save Changes -->
   <!-- Edit invoice end -->
 
   <!-- Delete Modal -->
-  Confirm Deletion
-  Are you sure you want to delete invoice #<!-- Add id -->? 
-  This action cannot be undone.
+  <!-- Confirm Deletion
+  Are you sure you want to delete invoice #Add id?  -->
+  <!-- This action cannot be undone.
 
   Cancel
-  Delete
+  Delete -->
+  </div>
   <!-- Delete Modal end -->
+  <script src="invoice.js"></script>
 </body>
 
 </html>
