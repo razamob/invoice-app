@@ -45,14 +45,10 @@ function createInvoice(data){
     invoice.innerHTML = `<div class="item-invoice">#${data[i].id}</div>
     <div class="item-invoice">Due ${data[i].paymentDue}</div>
     <div class="item-invoice">${data[i].clientName}</div>
-    <div class="item-invoice due">£ 1${data[i].total}</div>
+    <div class="item-invoice due">£ ${data[i].total}</div>
     <div class="item-invoice payment ${data[i].status}"><span></span> ${data[i].status}</div>
     <div onClick="hello" class="item-invoice icon"><a href="./invoice.html?${data[i].id}"><img src="./assets/icon-arrow-right.svg" alt="Right arrow"></a></div>`;
     invoices.append(invoice);
     }
 }
 
-function hello(){
-    var queryString = location.search.substring(1);
-    console.log("HELLO");
-}

@@ -9,10 +9,18 @@ fetch("./data.json")
     let newData = data.find(x => x.id === queryString)
     changeStatusLabel(newData);
     changeInvoice(newData);
+    document.querySelector('.mark-paid').addEventListener("click", function(){
+        newData.status = 'paid';
+        const payment = document.querySelector('.payment')
+        payment.classList.remove('pending');
+        payment.classList.add(newData.status);   
+        payment.innerHTML = "<span></span> Paid"  
+    });
 })
 .catch(err =>{
     console.log(err)
 });
+
 
 // myArray.find(x => x.id === '45').foo;
 function changeStatusLabel(data){
@@ -60,4 +68,27 @@ function changeInvoice(data){
     paymentDue.querySelector('h3').textContent = paymentDate;
   
 
+    // ITEMS
+    const bottomSection = document.querySelector('.first-bottom-section');
+
+    items = data.items;
+    for(let i=0;i<items.length;i++){
+        let info = document.createElement('div');
+        info.classList.add('info');
+        info.innerHTML = `<div class="left-info">
+        <div class="left-cats">
+        <p>${items[i].name}</p>
+      </div>
+      <div class="right-cats">
+        <p class="colored">${items[i].quantity}</p>
+        <p class="colored">${items[i].price}</p>
+        <p>${items[i].total}</p>
+      </div>
+      </div>`;
+      bottomSection.append(info);
+    }
+
+    //TOTAL INVOICE
+    const totalInvoice = document.querySelector('.total-amount-due');
+    totalInvoice.textContent = data.total;
 }
